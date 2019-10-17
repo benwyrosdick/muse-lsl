@@ -167,7 +167,7 @@ def stream(address, backend='auto', interface=None, name=None, ppg_enabled=False
         print("Streaming%s%s%s%s..." %
               (eeg_string, ppg_string, acc_string, gyro_string))
 
-        while true:
+        while True:
             try:
                 if(time() - muse.last_timestamp < AUTO_DISCONNECT_DELAY):
                     print("Current Delay: %d" % (time() - muse.last_timestamp))
