@@ -169,6 +169,7 @@ def stream(address, backend='auto', interface=None, name=None, ppg_enabled=False
 
         while time() - muse.last_timestamp < AUTO_DISCONNECT_DELAY:
             try:
+		print("Current Delay: %d", time() - muse.last_timestamp)
                 sleep(1)
             except KeyboardInterrupt:
                 muse.stop()
